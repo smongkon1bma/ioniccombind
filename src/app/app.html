@@ -1,14 +1,17 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
+  <ion-header id="navlefthead">
+    <div class="hide-card">
+      <img src="assets/imgs/bma.jpg" class="custom-avatar">
+      <h2>มงคล แซ่เตียว</h2>
+      <p>smongkon@hotmail.com</p>
+    </div>
+
   </ion-header>
 
   <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        <ion-icon name="{{p.icon}}" item-left></ion-icon> {{p.title}}
       </button>
     </ion-list>
   </ion-content>
